@@ -1,7 +1,7 @@
 import { createSlice, nanoid } from '@reduxjs/toolkit';
 
 const initialState = [
-  // Example: { id: '1', name: 'Alice', role: 'Developer', email: 'alice@email.com' }
+
 ];
 
 const teamSlice = createSlice({

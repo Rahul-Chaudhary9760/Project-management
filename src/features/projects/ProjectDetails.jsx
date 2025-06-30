@@ -25,9 +25,6 @@ export default function ProjectDetails() {
   // All team members in global store
   const allTeamMembers = useSelector(state => state.team);
 
-  // Get project's team as full objects (not just IDs)
- console.log("project.members:------", project?.members); // Should be array of IDs
-console.log("allTeamMembers:-----", allTeamMembers);    // Should be array of member objects
 const projectMembers = (project?.members || [])
   .map(id => allTeamMembers.find(m => m.id === id))
   .filter(Boolean);
