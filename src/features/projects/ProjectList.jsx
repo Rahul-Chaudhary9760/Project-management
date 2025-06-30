@@ -10,11 +10,15 @@ export default function ProjectList() {
 
   return (
     <div className="p-8">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold">Projects</h1>
-        <Button asChild>
-          <Link to="/projects/new-project">+ Add Project</Link>
+      <div className="flex justify-end items-center mb-6">
+        {
+          projects && projects.length > 0 && (
+            <Button asChild>
+          <Link to="/projects/new-project">+ Add New Project</Link>
         </Button>
+          )
+        }
+        
       </div>
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {(!projects || projects.length === 0) ? (

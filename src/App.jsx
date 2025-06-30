@@ -3,7 +3,7 @@ import AppRoutes from './app/Routes'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter>     
       <AppRoutes/>
     </BrowserRouter>
   )

@@ -28,18 +28,15 @@ A modern React-Redux project management dashboard featuring role-based access, r
 2. **Install dependencies:**
    ```bash
    npm install
-   # or
-   yarn install
    ```
 
 3. **Start the development server:**
    ```bash
-   npm start
-   # or
-   yarn start
+   npm run dev
+
    ```
 
-4. **Visit [http://localhost:5173](http://localhost:5173) in your browser.**
+4. **Visit [http://localhost:5173/dashboard](http://localhost:5173/dashboard) in your browser.**
 
 ---
 
@@ -54,6 +51,8 @@ src/
   components/
     ui/            # Custom Shadcn-based UI components (card, button, dialog, input, etc.)
   pages/           # App pages: CreateProject, Dashboard
+  layout/          # Common layout 
+  theme/           # For change theme
   app/
     Routes.jsx     # Application routes (react-router)
     store.js       # Redux store configuration

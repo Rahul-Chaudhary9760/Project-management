@@ -8,7 +8,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-// If you pass an existing task prop, this form is in edit mode
 export default function TaskForm({ projectId, task, onFinish }) {
   const dispatch = useDispatch();
   const isEdit = !!task;
@@ -46,6 +45,7 @@ export default function TaskForm({ projectId, task, onFinish }) {
           onBlur={formik.handleBlur}
           required
           placeholder="Enter task title"
+          className="mt-2"
         />
         {formik.touched.title && formik.errors.title && (
           <div className="text-red-500 text-xs mt-1">{formik.errors.title}</div>
@@ -60,6 +60,7 @@ export default function TaskForm({ projectId, task, onFinish }) {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           placeholder="Describe your task"
+          className="mt-2"
         />
         {formik.touched.description && formik.errors.description && (
           <div className="text-red-500 text-xs mt-1">{formik.errors.description}</div>
@@ -72,7 +73,8 @@ export default function TaskForm({ projectId, task, onFinish }) {
           name="state"
           value={formik.values.state}
           onChange={formik.handleChange}
-          className="block border rounded p-1"
+           className="block w-full border rounded p-2 mt-2 bg-white text-black border-gray-300 dark:bg-gray-800 dark:text-white dark:border-gray-600"
+
         >
           <option value="todo">To Do</option>
           <option value="inprogress">In Progress</option>

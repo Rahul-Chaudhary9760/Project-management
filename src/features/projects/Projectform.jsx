@@ -10,11 +10,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { useFormik } from "formik";
 import * as Yup from 'yup'
 
-const STATUS_OPTIONS = [
-  { value: "todo", label: "To Do" },
-  { value: "progress", label: "In Progress" },
-  { value: "done", label: "Done" }
-];
 
 export default function ProjectForm() {
   const [name, setName] = useState("");
@@ -48,7 +43,7 @@ export default function ProjectForm() {
   }
 
   return (
-    <div className="flex justify-center items-center min-h-[60vh]">
+    <div className="flex justify-center items-center min-h-[80vh]">
       <Card className="w-full max-w-md shadow-lg">
         <CardHeader>
           <CardTitle>Create New Project</CardTitle>
@@ -65,7 +60,7 @@ export default function ProjectForm() {
                 onBlur={formik.handleBlur}
                 required
                 placeholder="Enter project name"
-                className="mt-1"
+                className="mt-2"
               />
               {formik.touched.name && formik.errors.name && (
                 <div className="text-red-500 text-xs mt-1">{formik.errors.name}</div>
@@ -80,7 +75,7 @@ export default function ProjectForm() {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 placeholder="Describe your project"
-                className="mt-1"
+                className="mt-2"
               />
               {formik.touched.description && formik.errors.description && (
                 <div className="text-red-500 text-xs mt-1">{formik.errors.description}</div>
