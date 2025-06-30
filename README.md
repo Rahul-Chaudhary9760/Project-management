@@ -35,17 +35,32 @@ src/
     projects/
       ProjectDetails.jsx
       projectSlice.js
+      ProjectList.jsx
+      Projectform.jsx
     teams/
-      teamSlice.js
+      teamSlice.js      
     tasks/
       TaskList.jsx
       TaskChart.jsx
+      Taskform.jsx
+      taskSlice.js
   components/
     ui/
       card.jsx
       button.jsx
+      dailog.jsx
+      input.jsx
+      label.jsx
+      select.jsx
+      textarea.jsx
+   /pages
+      CreateProject.jsx
+      Dashboard.jsx
+   /app
+      Routes.jsx
+      store.js
   App.jsx
-  index.js
+  main.jsx
 ```
 
 ---
